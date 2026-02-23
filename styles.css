@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'UniversLTPro-45Light';
-    src: url('UniversLTPro-45Light.otf') format('opentype');
+    src: url('/UniversLTPro-45Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'UniversLTPro-55Roman';
-    src: url('Fonts/UniversLTPro-55Roman.otf') format('opentype');
+    src: url('/UniversLTPro-55Roman.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'UniversLTPro-65Bold';
-    src: url('Fonts/UniversLTPro-65Bold.otf') format('opentype');
+    src: url('/UniversLTPro-65Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
