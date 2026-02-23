@@ -1,0 +1,334 @@
+:root {
+    --primary: #4c7c8b;
+    --primary-light: #7baea1;
+    --bg: #e1dacb;
+    --bg-light: #f5f1ea;
+    --bg-card: #ffffff;
+    --text-primary: #2d3436;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border: #d4c9b8;
+    --border-light: #e8e0d3;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@font-face {
+    font-family: 'UniversLTPro-45Light';
+    src: url('Fonts/UniversLTPro-45Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UniversLTPro-55Roman';
+    src: url('Fonts/UniversLTPro-55Roman.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UniversLTPro-65Bold';
+    src: url('Fonts/UniversLTPro-65Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'UniversLTPro-45Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.agenda-embed {
+    width: 100%;
+    max-width: 100%;
+    background: var(--bg);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* Days Grid - Card Layout */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Day Card */
+.day-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-card:hover {
+    border-color: var(--border);
+}
+
+.day-card-header {
+    background: linear-gradient(135deg, #4c7c8b 0%, #7baea1 100%);
+    color: white;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.day-date {
+    font-size: 17px;
+    font-weight: 700;
+    opacity: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Events List */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 10px;
+    flex: 1;
+}
+
+.event-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: var(--bg-light);
+    border-radius: 0;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    align-items: flex-start;
+}
+
+.event-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(76, 124, 139, 0.12);
+    color: var(--primary);
+    border-radius: 0;
+    font-size: 16px;
+}
+
+.event-item:hover {
+    background: var(--bg-card);
+    border-color: var(--border);
+}
+
+
+.event-time {
+    min-width: 75px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-primary);
+    padding: 7px 11px;
+    background: white;
+    border-radius: 0;
+    text-align: center;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+    line-height: 1.3;
+}
+
+.event-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+        line-height: 1;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.event-description {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.event-time-range {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Footer */
+.agenda-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+    .days-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .day-card-header {
+        padding: 16px 20px;
+    }
+    
+    .events-list {
+        padding: 14px;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .days-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .day-card-header {
+        padding: 16px 18px;
+    }
+    
+    .day-title {
+        font-size: 20px;
+    }
+    
+    .day-date {
+        font-size: 16px;
+    }
+    
+    .events-list {
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .event-item {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .event-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        font-size: 14px;
+    }
+    
+    .event-time {
+        min-width: 70px;
+        font-size: 12px;
+        padding: 6px 9px;
+    }
+    
+    .event-title {
+        font-size: 14px;
+    }
+    
+    .event-description {
+        font-size: 12px;
+    }
+    
+    .event-time-range {
+        font-size: 12px;
+    }
+    
+    .agenda-footer {
+        padding: 10px 16px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .days-grid {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .day-card-header {
+        padding: 14px 16px;
+    }
+    
+    .day-title {
+        font-size: 18px;
+    }
+    
+    .day-date {
+        font-size: 15px;
+    }
+    
+    .events-list {
+        padding: 10px;
+    }
+    
+    .event-item {
+        padding: 8px;
+    }
+    
+    .event-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        font-size: 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .agenda-footer {
+        display: none;
+    }
+    
+    .day-card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
