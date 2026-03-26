@@ -1,8 +1,8 @@
 :root {
-    --primary: #4c7c8b;
-    --primary-light: #7baea1;
-    --bg: #e1dacb;
-    --bg-light: #f5f1ea;
+    --primary: #006bb6;
+    --primary-light: #006bb6;
+    --bg: #e5e5e5;
+    --bg-light: #e5e5e5;
     --bg-card: #ffffff;
     --text-primary: #2d3436;
     --text-secondary: #475569;
@@ -85,7 +85,8 @@ body {
 }
 
 .day-card-header {
-    background: linear-gradient(135deg, #4c7c8b 0%, #7baea1 100%);
+    /* background: linear-gradient(135deg, #4c7c8b 0%, #7baea1 100%); */
+    background: #006bb6;
     color: white;
     padding: 18px 22px;
     display: flex;
