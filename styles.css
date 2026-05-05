@@ -1,14 +1,14 @@
 :root {
-    --primary: #4c7c8b;
-    --primary-light: #7baea1;
+    --primary: #006bb6;
+    --primary-light: #006bb6;
     --bg: #e9edef;
-    --bg-light: #e9edef;
+    --bg-light: #e5e5e5;
     --bg-card: #ffffff;
     --text-primary: #2d3436;
     --text-secondary: #475569;
     --text-muted: #64748b;
-    --border: #f7f6f3;
-    --border-light: #f7f6f3;
+    --border: #d4c9b8;
+    --border-light: #e8e0d3;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0);
     --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -85,7 +85,8 @@ body {
 }
 
 .day-card-header {
-    background: linear-gradient(135deg, #4c7c8b 0%, #7baea1 100%);
+    /* background: linear-gradient(135deg, #4c7c8b 0%, #7baea1 100%); */
+    background: #006bb6;
     color: white;
     padding: 18px 22px;
     display: flex;
